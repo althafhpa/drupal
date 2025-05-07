@@ -1,0 +1,6 @@
+services:
+  allow_route_by_ip.subscriber:
+    class: Drupal\allow_route_by_ip\EventSubscriber\AllowRouteByIpSubscriber
+    arguments: ['@config.factory', '@current_user', '@logger.factory']
+    tags:
+      - { name: event_subscriber }

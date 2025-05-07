@@ -1,0 +1,102 @@
+.url-analyzer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.url-analyzer-refresh {
+  margin-left: 10px;
+}
+.url-analyzer-wrapper {
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.url-analyzer-summary {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.url-analyzer-actions {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.url-analyzer-actions .button {
+  background: #0071b8;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.url-analyzer-actions .button:hover {
+  background: #2a92d8;
+}
+
+.url-analyzer-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.url-analyzer-table th,
+.url-analyzer-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.url-analyzer-table th {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+
+.url-analyzer-pager {
+  margin-top: 20px;
+}
+
+.url-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.google-status-results,
+.advanced-analysis-results {
+  padding: 20px;
+}
+
+.status-section,
+.appearance-section,
+.seo-metrics,
+.technical-details {
+  margin-bottom: 20px;
+}
+
+.status {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.status.indexed {
+  color: green;
+}
+
+.status.not_indexed {
+  color: red;
+}
+
+.url-analyzer-dialog {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.button.is-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+

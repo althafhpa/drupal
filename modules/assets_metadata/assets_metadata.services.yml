@@ -1,0 +1,9 @@
+services:
+  assets_metadata.commands:
+    class: Drupal\assets_metadata\Commands\AssetsMetadataCommands
+    tags:
+      - { name: drush.command }
+
+  assets_metadata.api_controller:
+    class: Drupal\assets_metadata\Controller\AssetsMetadataApiController
+    arguments: ['@entity_type.manager', '@file_system']

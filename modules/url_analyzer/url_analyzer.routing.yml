@@ -1,0 +1,96 @@
+url_analyzer.get_urls:
+  path: '/admin/reports/urls'
+  defaults:
+    _controller: '\Drupal\url_analyzer\Controller\UrlAnalyzer::getUrls'
+    _title: 'Collect Site URLs'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+
+url_analyzer.clear_urls:
+  path: '/admin/reports/url-list/clear'
+  defaults:
+    _controller: '\Drupal\url_analyzer\Controller\UrlAnalyzer::clearUrls'
+    _title: 'Clear URL List'
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+
+url_analyzer.node_urls:
+  path: '/admin/reports/node-urls'
+  defaults:
+    _controller: '\Drupal\url_analyzer\Controller\UrlAnalyzer::displayNodeUrls'
+    _title: 'Node URLs'
+  requirements:
+    _permission: 'access url analyzer'
+  options:
+    _admin_route: TRUE
+
+url_analyzer.path_aliases:
+  path: '/admin/reports/path-aliases'
+  defaults:
+    _controller: '\Drupal\url_analyzer\Controller\UrlAnalyzer::displayPathAliases'
+    _title: 'Path Aliases'
+  requirements:
+    _permission: 'access url analyzer'
+  options:
+    _admin_route: TRUE
+
+url_analyzer.missing_paths:
+  path: '/admin/reports/missing-paths'
+  defaults:
+    _controller: '\Drupal\url_analyzer\Controller\UrlAnalyzer::displayMissingPaths'
+    _title: 'Missing Path Aliases'
+  requirements:
+    _permission: 'access url analyzer'
+  options:
+    _admin_route: TRUE
+
+url_analyzer.analyze_paths:
+  path: '/admin/reports/url-categories'
+  defaults:
+    _controller: '\Drupal\url_analyzer\Controller\UrlAnalyzer::analyzePaths'
+    _title: 'URL Categories Analysis'
+  requirements:
+    _permission: 'access url analyzer'
+  options:
+    _admin_route: TRUE
+
+url_analyzer.content_access_routes:
+  path: '/admin/reports/content-access-routes'
+  defaults:
+    _controller: 'Drupal\url_analyzer\Controller\UrlAnalyzer::displayContentAccessRoutes'
+    _title: 'Routes with Content Access'
+  requirements:
+    _permission: 'access url analyzer'
+  options:
+    _admin_route: TRUE
+
+url_analyzer.route_analyzer:
+  path: '/admin/reports/route-analyzer'
+  defaults:
+    _controller: 'Drupal\url_analyzer\Controller\UrlAnalyzer::displayRouteAnalyzerForm'
+    _title: 'Route Analyzer'
+  requirements:
+    _permission: 'access url analyzer'
+  options:
+    _admin_route: TRUE
+
+url_analyzer.route_paths:
+  path: '/admin/reports/route-paths'
+  defaults:
+    _controller: 'Drupal\url_analyzer\Controller\UrlAnalyzer::displayRoutePaths'
+    _title: 'Route Paths'
+  requirements:
+    _permission: 'access url analyzer'
+  options:
+    _admin_route: TRUE
+
+
+
+
+
+
+

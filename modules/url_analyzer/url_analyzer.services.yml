@@ -1,0 +1,9 @@
+services:
+  url_analyzer.collector:
+    class: Drupal\url_analyzer\Service\UrlCollectorService
+    arguments:
+      - '@database'
+      - '@entity_type.manager'
+      - '@path.validator'
+      - '@module_handler'
+      - '@config.factory'

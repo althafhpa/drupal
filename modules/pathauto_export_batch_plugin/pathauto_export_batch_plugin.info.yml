@@ -1,0 +1,7 @@
+name: UTS Path Auto Export Batch
+description: Provides functionality for exporting pathauto aliases in batches.
+type: module
+core_version_requirement: ^9.0 || ^10
+
+dependencies:
+  - batch_plugin:batch_plugin

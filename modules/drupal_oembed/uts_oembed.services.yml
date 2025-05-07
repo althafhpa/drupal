@@ -1,0 +1,16 @@
+services:
+  oembed.resource_builder:
+    class: Drupal\drupal_oembed\ResourceBuilder
+    arguments: [
+      '@request_stack',
+      '@logger.factory',
+      '@drupal_oembed.processor',
+    ]
+  oembed.processor:
+    class: Drupal\drupal_oembed\ResourceProcessor
+    arguments: [
+      '@request_stack',
+      '@path_alias.manager',
+      '@logger.factory',
+      '@metatag.manager'
+    ]

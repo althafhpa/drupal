@@ -1,0 +1,6 @@
+assets_metadata.download_form:
+  title: 'Download Assets Metadata'
+  description: 'Download metadata for assets within a date range'
+  route_name: assets_metadata.download_form
+  parent: system.admin_content
+  weight: 99

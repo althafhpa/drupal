@@ -1,0 +1,15 @@
+Drush:
+
+ddev drush assets-meta:refresh --force --batch-size=500 --start-date=2023-01-01 --end-date=2023-12-31
+
+ddev drush assets-meta:check-remote --force --batch-size=500 --missing-only --base-url=https://example.com
+
+
+Form:
+
+/api/assets-metadata?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD&delete-unused&assets-site-url=https://example.com
+
+
+API:
+
+https://mysite8.ddev.site/api/assets-metadata?assets-site-url=https://drupal.mysite.com.au&end_date=2023-04-02&start_date=2023-03-01&delete-unused

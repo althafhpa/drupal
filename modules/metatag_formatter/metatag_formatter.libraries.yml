@@ -1,0 +1,10 @@
+json-formatter:
+  version: 1.x
+  css:
+    theme:
+      css/json-formatter.css: {}
+  js:
+    js/json-formatter.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

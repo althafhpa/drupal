@@ -1,0 +1,9 @@
+pre.json-formatter {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  max-height: 300px;
+  overflow: auto;
+  font-family: monospace;
+  white-space: pre-wrap;
+}

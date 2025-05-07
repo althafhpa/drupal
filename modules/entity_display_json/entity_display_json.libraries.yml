@@ -1,0 +1,11 @@
+content_explorer:
+  version: 1.x
+  css:
+    theme:
+      css/content-explorer.css: {}
+  js:
+    js/export-refresh.js: {minified: false}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once

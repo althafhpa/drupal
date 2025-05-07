@@ -1,0 +1,6 @@
+name: Scanner Extended
+type: module
+description: 'Extends Scanner module to search code files and generate reports.'
+core_version_requirement: '^10.3 || ^11'
+dependencies:
+  - scanner:scanner

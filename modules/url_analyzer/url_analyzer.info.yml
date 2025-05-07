@@ -1,0 +1,5 @@
+name: URL Analyzer
+type: module
+description: 'Collects and analyzes URLs from various Drupal sources'
+package: Custom
+core_version_requirement: ^9 || ^10

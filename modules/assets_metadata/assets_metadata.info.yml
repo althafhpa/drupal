@@ -1,0 +1,5 @@
+name: Assets Metadata
+type: module
+description: 'Provides JSON endpoint for public files metadata and sync capabilities'
+package: Custom
+core_version_requirement: ^8 || ^9 || ^10

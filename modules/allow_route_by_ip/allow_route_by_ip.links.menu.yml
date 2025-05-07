@@ -1,0 +1,6 @@
+allow_route_by_ip.admin:
+  title: 'IP Route Access'
+  description: 'Configure IP-based route access restrictions'
+  parent: system.admin_config_system
+  route_name: allow_route_by_ip.settings
+  weight: 0

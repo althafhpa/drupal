@@ -1,0 +1,88 @@
+.field-toggles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .field-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .field-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .field-toggle + label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .field-toggle + label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+  }
+  
+  .field-toggle:checked + label {
+    background-color: #2196F3;
+  }
+  
+  .field-toggle:checked + label:before {
+    transform: translateX(26px);
+  }
+  
+  .field-toggle:focus + label {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  .content-explorer-results {
+    margin-top: 20px;
+  }
+  
+  .content-explorer-results details {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .content-explorer-results details summary {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .content-explorer-results .field-item {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .content-explorer-results .field-item:last-child {
+    border-bottom: none;
+  }
+
+  .content-explorer-table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+  
+  

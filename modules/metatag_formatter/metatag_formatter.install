@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Installation functions for the Metatag Formatter module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function metatag_formatter_install() {
+  \Drupal::messenger()->addMessage(t('Metatag Field Formatter module has been installed. You can now use the "Plain text metatags" formatter for metatag fields in views.'));
+}

@@ -1,0 +1,18 @@
+allow_route_by_ip.settings:
+  type: config_object
+  label: 'Allow Route by IP settings'
+  mapping:
+    enabled:
+      type: boolean
+      label: 'Enable IP-based route restrictions'
+      description: 'When enabled, route access will be restricted by IP address'
+    route_ip_map:
+      type: mapping
+      label: 'Route to IP mapping'
+      mapping:
+        '*':
+          type: sequence
+          label: 'IP addresses for a specific route'
+          sequence:
+            type: string
+            label: 'IP address or CIDR range'

@@ -1,0 +1,7 @@
+drupal_oembed.endpoint:
+  path: '/drupal_oembed/content'
+  defaults:
+    _controller: '\Drupal\drupal_oembed\Controller\Endpoint::response'
+    _title: 'drupal_oembed content'
+  requirements:
+    _permission: 'access content'

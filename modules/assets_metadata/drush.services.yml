@@ -1,0 +1,6 @@
+services:
+  assets_metadata.commands:
+    class: Drupal\assets_metadata\Commands\AssetsMetadataCommands
+    tags:
+      - { name: drush.command }
+

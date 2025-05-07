@@ -1,0 +1,7 @@
+allow_route_by_ip.settings:
+  path: '/admin/config/system/allow-route-by-ip'
+  defaults:
+    _form: '\Drupal\allow_route_by_ip\Form\AllowRouteByIpSettingsForm'
+    _title: 'IP Access Control Settings'
+  requirements:
+    _permission: 'administer site configuration'

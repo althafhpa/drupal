@@ -1,0 +1,28 @@
+services:
+  entity_display_json.commands:
+    class: \Drupal\entity_display_json\Commands\EntityDisplayJsonCommands
+    arguments: ['@entity_type.manager', '@path_alias.manager']
+    tags:
+      - { name: drush.command }
+
+  # Define the logger channel for our module
+  logger.channel.entity_display_json:
+    parent: logger.channel_base
+    arguments: ['entity_display_json']
+
+  entity_display_json.batch_processor:
+    class: Drupal\entity_display_json\Service\ContentBatchProcessor
+    arguments: ['@entity_type.manager', '@entity_field.manager', '@entity_display_json.field_formatter', '@string_translation']
+
+  entity_display_json.content_exporter:
+    class: Drupal\entity_display_json\Service\ContentExporter
+    arguments: ['@entity_type.manager', '@entity_field.manager', '@string_translation']
+
+  entity_display_json.field_formatter:
+    class: Drupal\entity_display_json\Service\FieldFormatter
+    arguments: 
+      - '@entity_type.manager'
+      - '@module_handler'
+      - '@renderer'
+      - '@string_translation'
+      - '@logger.channel.entity_display_json'

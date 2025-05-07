@@ -1,0 +1,6 @@
+services:
+  scanner_extended.commands:
+    class: Drupal\scanner_extended\Commands\ScannerExtendedCommands
+    arguments: ['@database', '@file_system', '@module_handler', '@theme_handler', '@date.formatter']
+    tags:
+      - { name: drush.command }

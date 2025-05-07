@@ -1,0 +1,88 @@
+entity_display_json.info:
+  path: '/ejson'
+  defaults:
+    _title: 'Site settings JSON'
+    _controller: '\Drupal\entity_display_json\Controller\EntityDisplayJsonInfo::getInfo'
+  requirements:
+    _permission: 'access content'
+
+entity_display_json.build:
+  path: '/ejson/{entity_type}/{uuid}/{display_id}'
+  defaults:
+    _title: 'Build JSON'
+    _controller: '\Drupal\entity_display_json\Controller\EntityDisplayJsonController::build'
+    display_id: 'default'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      display_id:
+        type: 'entity_display_id'
+
+entity_display_json.list_nodes:
+  path: '/ejson/nodes/list'
+  defaults:
+    _title: 'List Nodes JSON'
+    _controller: '\Drupal\entity_display_json\Controller\EntityDisplayJsonController::listNodes'
+  requirements:
+    _permission: 'access content'
+
+entity_display_json.path:
+  path: '/ejson/fields'
+  defaults:
+    _title: 'Entity JSON by Path'
+    _controller: '\Drupal\entity_display_json\Controller\EntityDisplayJsonController::buildFromPathAlias'
+    display_id: 'default'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      display_id:
+        type: 'entity_display_id'
+
+entity_display_json.list_content_types:
+  path: '/api/content-types'
+  defaults:
+    _controller: '\Drupal\entity_display_json\Controller\EntityDisplayJsonController::listContentTypes'
+    _title: 'Content Types'
+  requirements:
+    _permission: 'access content'
+
+entity_display_json.list_content_type_fields:
+  path: '/api/content-types/{content_type}/fields'
+  defaults:
+    _controller: '\Drupal\entity_display_json\Controller\EntityDisplayJsonController::listContentTypeFields'
+    _title: 'Content Type Fields'
+  requirements:
+    _permission: 'access content'
+
+entity_display_json.content_explorer:
+  path: '/admin/content/explorer'
+  defaults:
+    _form: '\Drupal\entity_display_json\Form\ContentExplorerForm'
+    _title: 'Content Explorer'
+  requirements:
+    _permission: 'access content overview'
+
+entity_display_json.export_json:
+  path: '/admin/content/explorer/export/json/{uid}'
+  defaults:
+    _title: 'Export JSON'
+    _form: '\Drupal\entity_display_json\Form\ContentExplorerForm'
+  requirements:
+    _permission: 'access content'
+
+entity_display_json.list_entities:
+  path: '/ejson/{entity_type_id}/list'
+  defaults:
+    _controller: '\Drupal\entity_display_json\Controller\EntityDisplayJsonController::listEntities'
+    _title: 'List Entities'
+    entity_type_id: 'node'
+  requirements:
+    _permission: 'access content'
+    entity_type_id: '^[a-z0-9_]+$'
+  options:
+    parameters:
+      entity_type_id:
+        type: string
+

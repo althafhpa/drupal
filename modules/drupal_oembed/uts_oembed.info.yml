@@ -1,0 +1,5 @@
+name: Drupal oEmbed
+description: Provides functionality to expose Drupal pages via oEmbed endpoints
+
+type: module
+core_version_requirement: ^9.0 || ^10

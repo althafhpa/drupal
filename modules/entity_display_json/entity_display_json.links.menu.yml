@@ -1,0 +1,6 @@
+sentity_display_json.content_explorer:
+  title: 'Content Explorer'
+  description: 'Explore and export content with batch processing'
+  route_name: entity_display_json.content_explorer
+  parent: system.admin_content
+  weight: 10

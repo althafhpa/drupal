@@ -1,0 +1,10 @@
+name: Entity Display JSON
+type: module
+description: Leverages the display interface in Drupal to create JSON responses.
+package: Custom
+core_version_requirement: ^9 || ^10 || ^11
+
+# Information added by Drupal.org packaging script on 2024-09-12
+version: '1.1.2'
+project: 'entity_display_json'
+datestamp: 1726175957

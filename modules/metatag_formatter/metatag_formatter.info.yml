@@ -1,0 +1,7 @@
+name: 'Metatag Field Formatter'
+type: module
+description: 'Provides a formatter for metatag fields in views and exports.'
+core_version_requirement: ^8 || ^9 || ^10
+package: 'Custom'
+dependencies:
+  - metatag:metatag

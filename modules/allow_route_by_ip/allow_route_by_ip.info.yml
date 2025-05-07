@@ -1,0 +1,5 @@
+name: Allow Route by IP
+type: module
+description: 'Allows access to authenticated users and routes from specified IP addresses.'
+core_version_requirement: ^9 || ^10
+package: Custom

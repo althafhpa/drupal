@@ -1,0 +1,17 @@
+assets_metadata.download_form:
+  path: '/admin/content/assets-metadata/download'
+  defaults:
+    _form: '\Drupal\assets_metadata\Form\AssetsMetadataDownloadForm'
+    _title: 'Download Assets Metadata'
+  requirements:
+    _permission: 'administer site configuration'
+
+assets_metadata.api:
+  path: '/api/assets-metadata'
+  defaults:
+    _controller: '\Drupal\assets_metadata\Controller\AssetsMetadataApiController::getMetadata'
+    _title: 'Assets Metadata API'
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: TRUE
